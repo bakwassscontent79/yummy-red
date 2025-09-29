@@ -4,18 +4,18 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Yummy Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>New Bikaner — Sweets & Pure-Veg Vaishno Dhaba</title>
+  <meta name="description" content="Authentic Bikaneri sweets & pure-veg dhaba classics. Order sweets, thalis, and party packs via WhatsApp. Fast delivery in [City].">
+  <meta name="keywords" content="Bikaner sweets, Rajasthani sweets, pure veg dhaba, Indian restaurant, sweets shop, namkeens, barfis, laddoos, milk cake, dhaba food, vegetarian meals, party packs, WhatsApp ordering">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/nb-logo.png" rel="icon">
+  <link href="assets/img/nb-logo.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,13 +27,25 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Yummy
-  * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Schema Markup for New Bikaner -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "New Bikaner",
+    "image": "https://yourdomain.com/hero.jpg",
+    "telephone": "+919999080556",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Street Address",
+      "addressLocality": "City",
+      "postalCode": "PIN"
+    },
+    "servesCuisine": ["Indian","Rajasthani","Vegetarian"],
+    "priceRange": "₹",
+    "url": "https://yourdomain.com"
+  }
+  </script>
 </head>
 
 <body class="index-page">
@@ -43,8 +55,8 @@
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Yummy</h1>
+        <img src="assets/img/nb-logo.png" alt="New Bikaner Logo" style="height: 36px; margin-right: 10px;">
+        <h1 class="sitename">New Bikaner</h1>
         <span>.</span>
       </a>
 
@@ -53,53 +65,48 @@
           <li><a href="#hero" class="active">Home<br></a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#menu">Menu</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#chefs">Chefs</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="index.html#book-a-table">Book a Table</a>
+      <div class="d-flex align-items-center">
+        <button class="btn btn-outline-primary me-2" id="cart-button" data-bs-toggle="modal" data-bs-target="#cartModal">
+          <i class="bi bi-cart"></i> Cart <span id="cart-count" class="badge bg-primary">0</span>
+        </button>
+        <a class="btn-getstarted" href="https://wa.me/919999080556?text=Hello%20New%20Bikaner,%20I%20would%20like%20to%20place%20an%20order." style="background-color: #25D366; border-color: #25D366;">Order Now</a>
+      </div>
 
     </div>
   </header>
 
   <main class="main">
 
+    <!-- WhatsApp Banner -->
+    <div class="whatsapp-banner" style="background-color: #25D366; color: white; text-align: center; padding: 10px 0;">
+      <div class="container">
+        <p class="mb-0"><i class="bi bi-whatsapp"></i> Order now via WhatsApp: <a href="https://wa.me/919999080556?text=Hello%20New%20Bikaner,%20I%20would%20like%20to%20place%20an%20order." style="color: white; text-decoration: underline; font-weight: bold;">+91 99990 80556</a></p>
+      </div>
+    </div>
+
     <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
+    <section id="hero" class="hero section light-background new-bikaner-hero">
 
       <div class="container">
         <div class="row gy-4 justify-content-center justify-content-lg-between">
           <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
-            <h1 data-aos="fade-up">Enjoy Your Healthy<br>Delicious Food</h1>
-            <p data-aos="fade-up" data-aos-delay="100">We are team of talented designers making websites with Bootstrap</p>
+            <h1 data-aos="fade-up">New Bikaner — Sweets & Pure-Veg Vaishno Dhaba</h1>
+            <p data-aos="fade-up" data-aos-delay="100" class="new-bikaner-tagline">Authentic Bikaneri sweets • Pure-veg dhaba classics • Freshly prepared, always.</p>
             <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-              <a href="#book-a-table" class="btn-get-started">Booka a Table</a>
-              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+              <a href="#menu" class="btn-get-started">View Full Menu</a>
+              <a href="https://wa.me/919999080556?text=Hello%20New%20Bikaner,%20I%20would%20like%20to%20place%20an%20order." class="btn-watch-video d-flex align-items-center"><i class="bi bi-whatsapp"></i><span>Order Now on WhatsApp</span></a>
+            </div>
+            <div class="mt-4" data-aos="fade-up" data-aos-delay="300">
+              <a href="https://wa.me/919999080556?text=Hello%20New%20Bikaner,%20I%20would%20like%20to%20place%20an%20order." class="btn-getstarted" style="background-color: #25D366; border-color: #25D366;">Quick Order via WhatsApp <i class="bi bi-whatsapp"></i></a>
             </div>
           </div>
           <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-            <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+            <img src="assets/img/hero-img.png" class="img-fluid animated" alt="New Bikaner Sweets and Pure-Veg Vaishno Dhaba">
           </div>
         </div>
       </div>
@@ -112,38 +119,34 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>About Us<br></h2>
-        <p><span>Learn More</span> <span class="description-title">About Us</span></p>
+        <p><span>Learn More</span> <span class="description-title">About New Bikaner</span></p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
         <div class="row gy-4">
           <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid mb-4" alt="">
+            <img src="assets/img/about.jpg" class="img-fluid mb-4" alt="New Bikaner Sweets and Dhaba">
             <div class="book-a-table">
-              <h3>Book a Table</h3>
-              <p>+1 5589 55488 55</p>
+              <h3>Order via WhatsApp</h3>
+              <p>+91 99990 80556</p>
             </div>
           </div>
           <div class="col-lg-5" data-aos="fade-up" data-aos-delay="250">
             <div class="content ps-0 ps-lg-5">
               <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
+                Family-run sweets shop & dhaba serving authentic Rajasthani sweets, namkeens, and homestyle vegetarian meals. Fresh, hygienic, and crafted the traditional way.
               </p>
-              <ul>
-                <li><i class="bi bi-check-circle-fill"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                <li><i class="bi bi-check-circle-fill"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-                <li><i class="bi bi-check-circle-fill"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
-              </ul>
               <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                Born from a simple family recipe book, New Bikaner celebrates Rajasthani flavors in every bite. Our sweets — barfis, laddoos, milk cake and more — are slow-cooked and finished with care. The Vaishno dhaba serves hearty vegetarian meals: thalis, paneer specials, tandoori breads and quick snacks. Whether you're ordering a plate or a party pack, we promise true taste and consistent quality.
               </p>
 
               <div class="position-relative mt-4">
-                <img src="assets/img/about-2.jpg" class="img-fluid" alt="">
-                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+                <img src="assets/img/about-2.jpg" class="img-fluid" alt="New Bikaner Kitchen">
+                <a href="https://wa.me/919999080556?text=Hello%20New%20Bikaner,%20I%20would%20like%20to%20place%20an%20order." class="glightbox pulsating-play-btn"></a>
+              </div>
+              <div class="mt-4 text-center">
+                <a href="https://wa.me/919999080556?text=Hello%20New%20Bikaner,%20I%20would%20like%20to%20place%20an%20order." class="btn-getstarted" style="background-color: #25D366; border-color: #25D366;">Order Now via WhatsApp</a>
               </div>
             </div>
           </div>
@@ -162,13 +165,15 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="why-box">
-              <h3>Why Choose Yummy</h3>
+              <h3>Why Choose New Bikaner</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+                Authentic Bikaneri recipes preserved and crafted the traditional way with fresh ingredients and desi ghee.
               </p>
               <div class="text-center">
-                <a href="#" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
+                <a href="#menu" class="more-btn"><span>View Our Menu</span> <i class="bi bi-chevron-right"></i></a>
+              </div>
+              <div class="text-center mt-4">
+                <a href="https://wa.me/919999080556?text=Hello%20New%20Bikaner,%20I%20would%20like%20to%20place%20an%20order." class="btn-getstarted" style="background-color: #25D366; border-color: #25D366; font-size: 16px; padding: 8px 20px;">Order via WhatsApp</a>
               </div>
             </div>
           </div><!-- End Why Box -->
@@ -178,25 +183,25 @@
 
               <div class="col-xl-4">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                  <i class="bi bi-clipboard-data"></i>
-                  <h4>Corporis voluptates officia eiusmod</h4>
-                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                  <i class="bi bi-award"></i>
+                  <h4>Traditional Recipes</h4>
+                  <p>Bikaneri recipes preserved, not modified - authentic taste since day one</p>
                 </div>
               </div><!-- End Icon Box -->
 
               <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                  <i class="bi bi-gem"></i>
-                  <h4>Ullamco laboris ladore lore pan</h4>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                  <i class="bi bi-egg"></i>
+                  <h4>Pure-Veg Menu</h4>
+                  <p>Vaishno dhaba menu with no compromise on taste or quality</p>
                 </div>
               </div><!-- End Icon Box -->
 
               <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                  <i class="bi bi-inboxes"></i>
-                  <h4>Labore consequatur incidid dolore</h4>
-                  <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                  <i class="bi bi-truck"></i>
+                  <h4>Party Packs</h4>
+                  <p>Special catering options for 50/100 people with pre-booking</p>
                 </div>
               </div><!-- End Icon Box -->
 
@@ -212,7 +217,7 @@
     <!-- Stats Section -->
     <section id="stats" class="stats section dark-background">
 
-      <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
+      <img src="assets/img/stats-bg.jpg" alt="New Bikaner Kitchen" data-aos="fade-in">
 
       <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
@@ -220,29 +225,29 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Clients</p>
+              <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Years of Tradition</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
+              <span data-purecounter-start="0" data-purecounter-end="1000" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Happy Customers</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
+              <span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Daily Sweets Prepared</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Workers</p>
+              <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Menu Items</p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -258,352 +263,1889 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Our Menu</h2>
-        <p><span>Check Our</span> <span class="description-title">Yummy Menu</span></p>
+        <p><span>Check Our</span> <span class="description-title">Delicious Menu</span></p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="menu-tabs-wrapper mb-4" data-aos="fade-up" data-aos-delay="100">
+        <ul class="nav nav-tabs d-flex justify-content-center flex-wrap">
 
           <li class="nav-item">
-            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
-              <h4>Starters</h4>
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-savory">
+              <h4>Savory Snacks</h4>
             </a>
           </li><!-- End tab nav item -->
 
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
-              <h4>Breakfast</h4>
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-sweetsnacks">
+              <h4>Sweet Snacks</h4>
             </a><!-- End tab nav item -->
 
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-lunch">
-              <h4>Lunch</h4>
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-namkeen">
+              <h4>Namkeen & Bhujia</h4>
             </a>
           </li><!-- End tab nav item -->
 
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dinner">
-              <h4>Dinner</h4>
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-tandoor">
+              <h4>Tandoor Specials</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-chinese">
+              <h4>Chinese Specials</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-cold">
+              <h4>Cold Drinks</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dahi">
+              <h4>Dahi Specials</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-snacks">
+              <h4>Snacks & Starters</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-paneer">
+              <h4>Paneer Dishes</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-kofta">
+              <h4>Kofta Specials</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-potato">
+              <h4>Potato Specials</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dal">
+              <h4>Dal Specialties</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-vegetable">
+              <h4>Vegetable Curries</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-rice">
+              <h4>Rice Dishes</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-thali">
+              <h4>Special Thalis</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-barfi">
+              <h4>Barfi Variants</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-peda">
+              <h4>Peda & Roll</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-ladoo">
+              <h4>Ladoo & Traditional</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-bengali">
+              <h4>Bengali Specials</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-party">
+              <h4>Party Packs</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-bhaji">
+              <h4>Bhaji Box</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-addons">
+              <h4>Optional Add-ons</h4>
             </a>
           </li><!-- End tab nav item -->
 
         </ul>
+        </div>
 
         <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="tab-pane fade active show" id="menu-starters">
+          <div class="tab-pane fade active show" id="menu-savory">
 
             <div class="tab-header text-center">
               <p>Menu</p>
-              <h3>Starters</h3>
+              <h3>Savory Snacks</h3>
             </div>
 
             <div class="row gy-5">
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Magnam Tiste</h4>
+                <h4>Samosa</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Crispy triangular pastry with spiced potatoes
                 </p>
                 <p class="price">
-                  $5.95
+                  ₹20/Each
                 </p>
+                <button class="btn btn-primary add-to-cart-btn" data-item-id="b1" data-item-name="Samosa" data-item-price="20">Add to Cart</button>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Aut Luia</h4>
+                <h4>Kachori</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Flaky pastry filled with spiced lentils
                 </p>
                 <p class="price">
-                  $14.95
+                  ₹25/Each
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Est Eligendi</h4>
+                <h4>Bread Pakora</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Fried bread slices with spiced potato filling
                 </p>
                 <p class="price">
-                  $8.95
+                  ₹30/Each
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Eos Luibusdam</h4>
+                <h4>Mini Samosa (Dal wale)</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Small crispy pastries filled with spiced lentils
                 </p>
                 <p class="price">
-                  $12.95
+                  ₹300/kg | ₹150/500g | ₹75/250g
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Eos Luibusdam</h4>
+                <h4>Mini Kachori</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Small flaky pastries filled with spiced lentils
                 </p>
                 <p class="price">
-                  $12.95
+                  ₹300/kg | ₹150/500g | ₹75/250g
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Laboriosam Direva</h4>
+                <h4>Cream Roll</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Sweet cream-filled pastry rolls
                 </p>
                 <p class="price">
-                  $9.95
+                  ₹35/Each
                 </p>
               </div><!-- Menu Item -->
 
             </div>
-          </div><!-- End Starter Menu Content -->
+          </div><!-- End Savory Snacks Menu Content -->
 
-          <div class="tab-pane fade" id="menu-breakfast">
+          <div class="tab-pane fade" id="menu-sweetsnacks">
 
             <div class="tab-header text-center">
               <p>Menu</p>
-              <h3>Breakfast</h3>
+              <h3>Sweet Snacks</h3>
             </div>
 
             <div class="row gy-5">
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Magnam Tiste</h4>
+                <h4>Cream Roll</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Sweet cream-filled pastry rolls
                 </p>
                 <p class="price">
-                  $5.95
+                  ₹35/Each
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Aut Luia</h4>
+                <h4>Patisa</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Crispy and sweet patisa with pure desi ghee
                 </p>
                 <p class="price">
-                  $14.95
+                  ₹400/kg | ₹200/500g | ₹100/250g
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Est Eligendi</h4>
+                <h4>Milk Cake</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Soft and delicious milk cake
                 </p>
                 <p class="price">
-                  $8.95
-                </p>
-              </div><!-- Menu Item -->
-
-              <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Eos Luibusdam</h4>
-                <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
-                </p>
-                <p class="price">
-                  $12.95
-                </p>
-              </div><!-- Menu Item -->
-
-              <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Eos Luibusdam</h4>
-                <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
-                </p>
-                <p class="price">
-                  $12.95
-                </p>
-              </div><!-- Menu Item -->
-
-              <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Laboriosam Direva</h4>
-                <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
-                </p>
-                <p class="price">
-                  $9.95
+                  ₹450/kg | ₹225/500g | ₹112/250g
                 </p>
               </div><!-- Menu Item -->
 
             </div>
-          </div><!-- End Breakfast Menu Content -->
+          </div><!-- End Sweet Snacks Menu Content -->
 
-          <div class="tab-pane fade" id="menu-lunch">
+          <div class="tab-pane fade" id="menu-namkeen">
 
             <div class="tab-header text-center">
               <p>Menu</p>
-              <h3>Lunch</h3>
+              <h3>Namkeen</h3>
             </div>
 
             <div class="row gy-5">
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Magnam Tiste</h4>
+                <h4>Navratan Mixture</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Traditional Rajasthani mixed savory snack
                 </p>
                 <p class="price">
-                  $5.95
+                  ₹360/kg | ₹180/500g | ₹90/250g
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Aut Luia</h4>
+                <h4>Plain Bhujia</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Crispy and spicy plain bhujia
                 </p>
                 <p class="price">
-                  $14.95
+                  ₹360/kg | ₹180/500g | ₹90/250g
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Est Eligendi</h4>
+                <h4>Aloo Bhujia</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Spicy bhujia with aloo flakes
                 </p>
                 <p class="price">
-                  $8.95
+                  ₹360/kg | ₹180/500g | ₹90/250g
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Eos Luibusdam</h4>
+                <h4>Masala Bhujia</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Spicy and tangy masala bhujia
                 </p>
                 <p class="price">
-                  $12.95
+                  ₹360/kg | ₹180/500g | ₹90/250g
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Eos Luibusdam</h4>
+                <h4>Besan Papdi/Gathiya</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Crispy besan papdi with authentic spices
                 </p>
                 <p class="price">
-                  $12.95
+                  ₹360/kg | ₹180/500g | ₹90/250g
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Laboriosam Direva</h4>
+                <h4>Bhawnagri</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Traditional Rajasthani bhawnagri
                 </p>
                 <p class="price">
-                  $9.95
+                  ₹360/kg | ₹180/500g | ₹90/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Bikaneri Bhujia</h4>
+                <p class="ingredients">
+                  Special Bikaneri recipe bhujia
+                </p>
+                <p class="price">
+                  ₹380/kg | ₹190/500g | ₹95/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Patisa</h4>
+                <p class="ingredients">
+                  Crispy and sweet patisa with pure desi ghee
+                </p>
+                <p class="price">
+                  ₹400/kg | ₹200/500g | ₹100/250g
                 </p>
               </div><!-- Menu Item -->
 
             </div>
-          </div><!-- End Lunch Menu Content -->
+          </div><!-- End Namkeen Menu Content -->
 
-          <div class="tab-pane fade" id="menu-dinner">
+          <div class="tab-pane fade" id="menu-tandoor">
 
             <div class="tab-header text-center">
               <p>Menu</p>
-              <h3>Dinner</h3>
+              <h3>Tandoor Specials</h3>
             </div>
 
             <div class="row gy-5">
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Magnam Tiste</h4>
+                <h4>Roti</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Traditional Indian bread
                 </p>
                 <p class="price">
-                  $5.95
+                  ₹15/Each
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Aut Luia</h4>
+                <h4>Tawa Roti</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Pan-cooked traditional roti
                 </p>
                 <p class="price">
-                  $14.95
+                  ₹15/Each
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Est Eligendi</h4>
+                <h4>Rumali Roti</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Thin and soft rumali roti
                 </p>
                 <p class="price">
-                  $8.95
+                  ₹20/Each
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Eos Luibusdam</h4>
+                <h4>Butter Roti</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Traditional roti with butter
                 </p>
                 <p class="price">
-                  $12.95
+                  ₹20/Each
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Eos Luibusdam</h4>
+                <h4>Plain Nan</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Soft and fluffy plain naan
                 </p>
                 <p class="price">
-                  $12.95
+                  ₹35/Each
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Laboriosam Direva</h4>
+                <h4>Butter Nan</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Naan cooked with butter
                 </p>
                 <p class="price">
-                  $9.95
+                  ₹40/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Aloo Nan</h4>
+                <p class="ingredients">
+                  Naan stuffed with spiced potatoes
+                </p>
+                <p class="price">
+                  ₹45/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Lachha Nan/Parantha</h4>
+                <p class="ingredients">
+                  Layered nan/parantha
+                </p>
+                <p class="price">
+                  ₹40/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Butter Parantha</h4>
+                <p class="ingredients">
+                  Parantha cooked with butter
+                </p>
+                <p class="price">
+                  ₹40/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Plain Parantha</h4>
+                <p class="ingredients">
+                  Traditional plain parantha
+                </p>
+                <p class="price">
+                  ₹35/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Aloo Parantha</h4>
+                <p class="ingredients">
+                  Parantha stuffed with spiced potatoes
+                </p>
+                <p class="price">
+                  ₹40/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Paneer Parantha</h4>
+                <p class="ingredients">
+                  Parantha stuffed with cottage cheese
+                </p>
+                <p class="price">
+                  ₹60/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Paneer Naan</h4>
+                <p class="ingredients">
+                  Naan stuffed with cottage cheese
+                </p>
+                <p class="price">
+                  ₹65/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Onion Parantha</h4>
+                <p class="ingredients">
+                  Parantha stuffed with onions
+                </p>
+                <p class="price">
+                  ₹45/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Pudina Parantha</h4>
+                <p class="ingredients">
+                  Parantha stuffed with mint
+                </p>
+                <p class="price">
+                  ₹45/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Mixed Parantha</h4>
+                <p class="ingredients">
+                  Parantha with mixed stuffing
+                </p>
+                <p class="price">
+                  ₹50/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Missi Roti</h4>
+                <p class="ingredients">
+                  Spiced mixed flour roti
+                </p>
+                <p class="price">
+                  ₹30/Each
                 </p>
               </div><!-- Menu Item -->
 
             </div>
-          </div><!-- End Dinner Menu Content -->
+          </div><!-- End Tandoor Specials Menu Content -->
+
+          <div class="tab-pane fade" id="menu-chinese">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Chinese Specials</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Chowmein</h4>
+                <p class="ingredients">
+                  Stir-fried noodles with vegetables
+                </p>
+                <p class="price">
+                  ₹120/Half | ₹220/Full
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Chinese Specials Menu Content -->
+
+          <div class="tab-pane fade" id="menu-cold">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Cold Drinks</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Cold Drink (250ml)</h4>
+                <p class="ingredients">
+                  Chilled soft drinks
+                </p>
+                <p class="price">
+                  ₹20/250 ml
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Faluda Kulfi</h4>
+                <p class="ingredients">
+                  Traditional Indian ice cream with faluda
+                </p>
+                <p class="price">
+                  ₹60/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Cold Milk (750ml)</h4>
+                <p class="ingredients">
+                  Chilled milk
+                </p>
+                <p class="price">
+                  ₹60/750 ml
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Lassi</h4>
+                <p class="ingredients">
+                  Refreshing yogurt-based drink
+                </p>
+                <p class="price">
+                  ₹80/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Garam Doodh (Kullad)</h4>
+                <p class="ingredients">
+                  Warm milk in clay cup
+                </p>
+                <p class="price">
+                  ₹90/Each
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Cold Drinks Menu Content -->
+
+          <div class="tab-pane fade" id="menu-dahi">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Dahi Specials</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Raita</h4>
+                <p class="ingredients">
+                  Yogurt with vegetables
+                </p>
+                <p class="price">
+                  ₹120/Half | ₹200/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Bhalla Papdi</h4>
+                <p class="ingredients">
+                  Lentil dumplings with yogurt and chutneys
+                </p>
+                <p class="price">
+                  ₹170/Each
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Dahi Specials Menu Content -->
+
+          <div class="tab-pane fade" id="menu-snacks">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Snacks & Starters</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Chholey Bhature</h4>
+                <p class="ingredients">
+                  Spiced chickpeas with deep-fried bhature
+                </p>
+                <p class="price">
+                  ₹90/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Puri Chholey</h4>
+                <p class="ingredients">
+                  Deep-fried puris with spiced chickpeas
+                </p>
+                <p class="price">
+                  ₹90/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Chholey Rice</h4>
+                <p class="ingredients">
+                  Spiced chickpeas with steamed rice
+                </p>
+                <p class="price">
+                  ₹80/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Samosa</h4>
+                <p class="ingredients">
+                  Crispy triangular pastry with spiced potatoes
+                </p>
+                <p class="price">
+                  ₹60/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Chowmein Samosa</h4>
+                <p class="ingredients">
+                  Samosa with chowmein filling
+                </p>
+                <p class="price">
+                  ₹50/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Kachori</h4>
+                <p class="ingredients">
+                  Flaky pastry filled with spiced lentils
+                </p>
+                <p class="price">
+                  ₹70/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Paneer Pakora</h4>
+                <p class="ingredients">
+                  Fried cottage cheese fritters
+                </p>
+                <p class="price">
+                  ₹60/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Bread Pakora</h4>
+                <p class="ingredients">
+                  Fried bread slices with spiced potato filling
+                </p>
+                <p class="price">
+                  ₹80/Each
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Snacks & Starters Menu Content -->
+
+          <div class="tab-pane fade" id="menu-paneer">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Paneer Dishes</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Shahi Paneer</h4>
+                <p class="ingredients">
+                  Rich and creamy paneer in royal gravy
+                </p>
+                <p class="price">
+                  ₹150/Half | ₹280/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Makhani Paneer</h4>
+                <p class="ingredients">
+                  Butter paneer in rich tomato-based gravy
+                </p>
+                <p class="price">
+                  ₹160/Half | ₹300/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Paneer Masala</h4>
+                <p class="ingredients">
+                  Spiced paneer in flavorful gravy
+                </p>
+                <p class="price">
+                  ₹150/Half | ₹280/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Kadhai Paneer</h4>
+                <p class="ingredients">
+                  Paneer cooked with onions and peppers
+                </p>
+                <p class="price">
+                  ₹160/Half | ₹300/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Paneer Pasanda</h4>
+                <p class="ingredients">
+                  Paneer in rich nutty gravy
+                </p>
+                <p class="price">
+                  ₹150/Half | ₹280/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Chinese Tomato</h4>
+                <p class="ingredients">
+                  Paneer in Chinese-style tomato sauce
+                </p>
+                <p class="price">
+                  ₹150/Half | ₹320/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Khoya Paneer</h4>
+                <p class="ingredients">
+                  Paneer in rich khoya-based gravy
+                </p>
+                <p class="price">
+                  ₹170/Half | ₹300/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Paneer Korma</h4>
+                <p class="ingredients">
+                  Paneer in coconut-based mild gravy
+                </p>
+                <p class="price">
+                  ₹150/Half | ₹280/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Palak Paneer</h4>
+                <p class="ingredients">
+                  Paneer in spinach-based gravy
+                </p>
+                <p class="price">
+                  ₹120/Half | ₹200/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Mattar Paneer</h4>
+                <p class="ingredients">
+                  Paneer with green peas in spiced gravy
+                </p>
+                <p class="price">
+                  ₹140/Half | ₹220/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Paneer Mattar Mushroom</h4>
+                <p class="ingredients">
+                  Paneer with peas and mushrooms
+                </p>
+                <p class="price">
+                  ₹160/Half | ₹300/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Butter Paneer Masala</h4>
+                <p class="ingredients">
+                  Rich and buttery paneer dish
+                </p>
+                <p class="price">
+                  ₹200/Half | ₹360/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Paneer Bhurji</h4>
+                <p class="ingredients">
+                  Scrambled paneer with onions and spices
+                </p>
+                <p class="price">
+                  ₹250/Half | ₹400/Full
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Paneer Menu Content -->
+
+          <div class="tab-pane fade" id="menu-kofta">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Kofta Specials</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Kesari Malai Kofta</h4>
+                <p class="ingredients">
+                  Soft koftas in rich gravy
+                </p>
+                <p class="price">
+                  ₹180/Half | ₹320/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Malai Kofta</h4>
+                <p class="ingredients">
+                  Creamy koftas in mild gravy
+                </p>
+                <p class="price">
+                  ₹150/Half | ₹260/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Palak Kofta</h4>
+                <p class="ingredients">
+                  Koftas in spinach gravy
+                </p>
+                <p class="price">
+                  ₹150/Half | ₹260/Full
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Kofta Specials Menu Content -->
+
+          <div class="tab-pane fade" id="menu-potato">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Potato Specials</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Kashmiri Dum Aloo</h4>
+                <p class="ingredients">
+                  Potatoes in Kashmiri spices
+                </p>
+                <p class="price">
+                  ₹160/Half | ₹260/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Zeera Aloo</h4>
+                <p class="ingredients">
+                  Potatoes with cumin seeds
+                </p>
+                <p class="price">
+                  ₹100/Half | ₹220/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Aloo Paneer</h4>
+                <p class="ingredients">
+                  Potatoes with cottage cheese
+                </p>
+                <p class="price">
+                  ₹100/Half | ₹220/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Aloo Tomato</h4>
+                <p class="ingredients">
+                  Potatoes with tomatoes
+                </p>
+                <p class="price">
+                  ₹100/Half | ₹220/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Aloo Dum</h4>
+                <p class="ingredients">
+                  Whole potatoes in rich gravy
+                </p>
+                <p class="price">
+                  ₹120/Half | ₹190/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Aloo Dry</h4>
+                <p class="ingredients">
+                  Spiced dry potatoes
+                </p>
+                <p class="price">
+                  ₹130/Half | ₹200/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Aloo Palak</h4>
+                <p class="ingredients">
+                  Potatoes with spinach
+                </p>
+                <p class="price">
+                  ₹130/Half | ₹220/Full
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Potato Specials Menu Content -->
+
+          <div class="tab-pane fade" id="menu-dal">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Dal Specialties</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Yellow Dal</h4>
+                <p class="ingredients">
+                  Traditional yellow lentils
+                </p>
+                <p class="price">
+                  ₹100/Half | ₹190/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Yellow Dal Tadka</h4>
+                <p class="ingredients">
+                  Yellow lentils with tempering
+                </p>
+                <p class="price">
+                  ₹140/Half | ₹250/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Rajma</h4>
+                <p class="ingredients">
+                  Kidney beans in thick gravy
+                </p>
+                <p class="price">
+                  ₹140/Half | ₹220/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Special Dal Tadka</h4>
+                <p class="ingredients">
+                  Special lentils with tempering
+                </p>
+                <p class="price">
+                  ₹160/Half | ₹200/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Dal Makhani</h4>
+                <p class="ingredients">
+                  Black lentils with butter
+                </p>
+                <p class="price">
+                  ₹130/Half | ₹240/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Dal Fry</h4>
+                <p class="ingredients">
+                  Fried lentils with spices
+                </p>
+                <p class="price">
+                  ₹110/Half | ₹220/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Dal Maharani</h4>
+                <p class="ingredients">
+                  Royal lentils with rich gravy
+                </p>
+                <p class="price">
+                  ₹150/Half | ₹280/Full
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Dal Specialties Menu Content -->
+
+          <div class="tab-pane fade" id="menu-vegetable">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Vegetable Curries</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Aloo Matar</h4>
+                <p class="ingredients">
+                  Potatoes with green peas
+                </p>
+                <p class="price">
+                  ₹110/Half | ₹200/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Aloo Ghobi</h4>
+                <p class="ingredients">
+                  Potatoes with cauliflower
+                </p>
+                <p class="price">
+                  ₹130/Half | ₹220/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Channa Masala</h4>
+                <p class="ingredients">
+                  Chickpeas in spicy gravy
+                </p>
+                <p class="price">
+                  ₹150/Half | ₹240/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Mix Veg</h4>
+                <p class="ingredients">
+                  Mixed vegetables
+                </p>
+                <p class="price">
+                  ₹140/Half | ₹240/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Gobhi Masala</h4>
+                <p class="ingredients">
+                  Cauliflower in spicy gravy
+                </p>
+                <p class="price">
+                  ₹150/Half | ₹280/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Mattar Masala</h4>
+                <p class="ingredients">
+                  Green peas in spicy gravy
+                </p>
+                <p class="price">
+                  ₹140/Half | ₹220/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Palak Korma</h4>
+                <p class="ingredients">
+                  Spinach in mild gravy
+                </p>
+                <p class="price">
+                  ₹140/Half | ₹220/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Mattar Korma</h4>
+                <p class="ingredients">
+                  Green peas in mild gravy
+                </p>
+                <p class="price">
+                  ₹150/Half | ₹240/Full
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Vegetable Curries Menu Content -->
+
+          <div class="tab-pane fade" id="menu-rice">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Rice Dishes</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Tomato Rice</h4>
+                <p class="ingredients">
+                  Rice with tomatoes
+                </p>
+                <p class="price">
+                  ₹130/Half | ₹220/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Zeera Rice</h4>
+                <p class="ingredients">
+                  Cumin rice
+                </p>
+                <p class="price">
+                  ₹100/Half | ₹190/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Channa Rice</h4>
+                <p class="ingredients">
+                  Rice with chickpeas
+                </p>
+                <p class="price">
+                  ₹120/Half | ₹200/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Rajma Rice</h4>
+                <p class="ingredients">
+                  Rice with kidney beans
+                </p>
+                <p class="price">
+                  ₹100/Half | ₹180/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Veg Biryani</h4>
+                <p class="ingredients">
+                  Spiced rice with vegetables
+                </p>
+                <p class="price">
+                  ₹150/Half | ₹260/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Veg Pulao</h4>
+                <p class="ingredients">
+                  Fragrant rice with vegetables
+                </p>
+                <p class="price">
+                  ₹130/Half | ₹220/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Plain Rice</h4>
+                <p class="ingredients">
+                  Steamed rice
+                </p>
+                <p class="price">
+                  ₹90/Half | ₹160/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Mattar Pulao</h4>
+                <p class="ingredients">
+                  Rice with green peas
+                </p>
+                <p class="price">
+                  ₹130/Half | ₹200/Full
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Fried Rice</h4>
+                <p class="ingredients">
+                  Stir-fried rice with vegetables
+                </p>
+                <p class="price">
+                  ₹140/Half | ₹220/Full
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Rice Dishes Menu Content -->
+
+          <div class="tab-pane fade" id="menu-thali">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Special Thalis</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Special Thali</h4>
+                <p class="ingredients">
+                  Complete meal with roti, dal, vegetable, rice, salad, and sweet
+                </p>
+                <p class="price">
+                  ₹250/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Regular Thali</h4>
+                <p class="ingredients">
+                  Meal with roti, dal, vegetable, and rice
+                </p>
+                <p class="price">
+                  ₹190/Each
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Plain Thali</h4>
+                <p class="ingredients">
+                  Simple meal with roti, dal, and rice
+                </p>
+                <p class="price">
+                  ₹150/Each
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Special Thalis Menu Content -->
+
+          <div class="tab-pane fade" id="menu-barfi">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Barfi Variants</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Pista Barfi</h4>
+                <p class="ingredients">
+                  Rich barfi with pistachio flavor
+                </p>
+                <p class="price">
+                  ₹540/kg | ₹270/500g | ₹135/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Plain Barfi</h4>
+                <p class="ingredients">
+                  Traditional milk-based barfi
+                </p>
+                <p class="price">
+                  ₹500/kg | ₹250/500g | ₹125/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Bikaneri Barfi</h4>
+                <p class="ingredients">
+                  Special Bikaneri recipe barfi
+                </p>
+                <p class="price">
+                  ₹580/kg | ₹290/500g | ₹145/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Milk Cake</h4>
+                <p class="ingredients">
+                  Soft and delicious milk cake
+                </p>
+                <p class="price">
+                  ₹540/kg | ₹270/500g | ₹135/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Malai Barfi</h4>
+                <p class="ingredients">
+                  Creamy barfi with malai
+                </p>
+                <p class="price">
+                  ₹540/kg | ₹270/500g | ₹135/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Chocolate Barfi</h4>
+                <p class="ingredients">
+                  Rich chocolate-flavored barfi
+                </p>
+                <p class="price">
+                  ₹560/kg | ₹280/500g | ₹140/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Coconut Barfi</h4>
+                <p class="ingredients">
+                  Sweet barfi with coconut
+                </p>
+                <p class="price">
+                  ₹530/kg | ₹265/500g | ₹132/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Besan Barfi</h4>
+                <p class="ingredients">
+                  Traditional besan-based barfi
+                </p>
+                <p class="price">
+                  ₹360/kg | ₹180/500g | ₹90/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Kaju Barfi</h4>
+                <p class="ingredients">
+                  Rich barfi with cashew nuts
+                </p>
+                <p class="price">
+                  ₹1100/kg | ₹550/500g | ₹275/250g
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Barfi Variants Menu Content -->
+
+          <div class="tab-pane fade" id="menu-peda">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Peda & Roll</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Safed Peda</h4>
+                <p class="ingredients">
+                  Traditional white peda
+                </p>
+                <p class="price">
+                  ₹500/kg | ₹250/500g | ₹125/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Brown Peda</h4>
+                <p class="ingredients">
+                  Brown sugar-flavored peda
+                </p>
+                <p class="price">
+                  ₹540/kg | ₹270/500g | ₹135/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Mishri Peda</h4>
+                <p class="ingredients">
+                  Crystallized sugar peda
+                </p>
+                <p class="price">
+                  ₹580/kg | ₹290/500g | ₹145/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Khoya Roll</h4>
+                <p class="ingredients">
+                  Soft khoya rolls
+                </p>
+                <p class="price">
+                  ₹540/kg | ₹270/500g | ₹135/250g
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Peda & Roll Menu Content -->
+
+          <div class="tab-pane fade" id="menu-ladoo">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Ladoo & Traditional</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Boondi Ladoo</h4>
+                <p class="ingredients">
+                  Traditional boondi ladoo
+                </p>
+                <p class="price">
+                  ₹320/kg | ₹160/500g | ₹80/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Besan Ladoo</h4>
+                <p class="ingredients">
+                  Besan-based ladoo
+                </p>
+                <p class="price">
+                  ₹340/kg | ₹170/500g | ₹85/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Jodhpuri Ladoo</h4>
+                <p class="ingredients">
+                  Special Jodhpuri ladoo
+                </p>
+                <p class="price">
+                  ₹340/kg | ₹170/500g | ₹85/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Panjiri Ladoo</h4>
+                <p class="ingredients">
+                  Nutritious panjiri ladoo
+                </p>
+                <p class="price">
+                  ₹700/kg | ₹350/500g | ₹175/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Chane ke Ladoo</h4>
+                <p class="ingredients">
+                  Chickpea flour ladoo
+                </p>
+                <p class="price">
+                  ₹700/kg | ₹350/500g | ₹175/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Desi Ghee Pachisa</h4>
+                <p class="ingredients">
+                  Traditional pachisa with desi ghee
+                </p>
+                <p class="price">
+                  ₹540/kg | ₹270/500g | ₹135/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Sardaro ki Doda Barfi</h4>
+                <p class="ingredients">
+                  Rich barfi special
+                </p>
+                <p class="price">
+                  ₹540/kg | ₹270/500g | ₹135/250g
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Ladoo & Traditional Menu Content -->
+
+          <div class="tab-pane fade" id="menu-bengali">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Bengali Specials</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Safed Chamcham</h4>
+                <p class="ingredients">
+                  Traditional white chamcham
+                </p>
+                <p class="price">
+                  ₹500/kg | ₹250/500g | ₹125/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Black Chamcham</h4>
+                <p class="ingredients">
+                  Chocolate-flavored chamcham
+                </p>
+                <p class="price">
+                  ₹500/kg | ₹250/500g | ₹125/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Chena Toast</h4>
+                <p class="ingredients">
+                  Soft chena toast
+                </p>
+                <p class="price">
+                  ₹500/kg | ₹250/500g | ₹125/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Chena Murgi</h4>
+                <p class="ingredients">
+                  Special chena murgi
+                </p>
+                <p class="price">
+                  ₹700/kg | ₹350/500g | ₹175/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Kalakand</h4>
+                <p class="ingredients">
+                  Traditional kalakand
+                </p>
+                <p class="price">
+                  ₹640/kg | ₹320/500g | ₹160/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Rasgulla</h4>
+                <p class="ingredients">
+                  Soft and spongy rasgulla
+                </p>
+                <p class="price">
+                  ₹440/kg | ₹220/500g | ₹110/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Rasmalai</h4>
+                <p class="ingredients">
+                  Traditional rasmalai
+                </p>
+                <p class="price">
+                  ₹640/kg | ₹320/500g | ₹160/250g
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Rajbhog</h4>
+                <p class="ingredients">
+                  Royal sweet rajbhog
+                </p>
+                <p class="price">
+                  ₹540/kg | ₹270/500g | ₹135/250g
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Bengali Specials Menu Content -->
+
+          <div class="tab-pane fade" id="menu-party">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Party Packs</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Party Pack (50 people)</h4>
+                <p class="ingredients">
+                  Complete catering package for 50 guests
+                </p>
+                <p class="price">
+                  ₹7500/50 people
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Party Pack (100 people)</h4>
+                <p class="ingredients">
+                  Complete catering package for 100 guests
+                </p>
+                <p class="price">
+                  ₹14500/100 people
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Sweets (per plate)</h4>
+                <p class="ingredients">
+                  Sweet treats for each guest
+                </p>
+                <p class="price">
+                  ₹40/Per plate
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                <h4>5 Khaane Waala Box (1kg)</h4>
+                <p class="ingredients">
+                  Complete meal box with 5 servings
+                </p>
+                <p class="price">
+                  ₹500/1 kg
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Party Packs Menu Content -->
+
+          <div class="tab-pane fade" id="menu-bhaji">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Bhaji Box</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>5 Khaane Waala Box (1kg)</h4>
+                <p class="ingredients">
+                  Complete meal box with 5 servings
+                </p>
+                <p class="price">
+                  ₹500/1 kg
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Bhaji Box Menu Content -->
+
+          <div class="tab-pane fade" id="menu-addons">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Optional Add-ons</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Sweets (per plate)</h4>
+                <p class="ingredients">
+                  Sweet treats for each guest
+                </p>
+                <p class="price">
+                  ₹40/Per plate
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Optional Add-ons Menu Content -->
 
         </div>
 
@@ -611,406 +2153,13 @@
 
     </section><!-- /Menu Section -->
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>TESTIMONIALS</h2>
-        <p>What Are They <span class="description-title">Saying About Us</span></p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Saul Goodman</h3>
-                      <h4>Ceo &amp; Founder</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-1.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Sara Wilsson</h3>
-                      <h4>Designer</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-2.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Jena Karlis</h3>
-                      <h4>Store Owner</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-3.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>John Larson</h3>
-                      <h4>Entrepreneur</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-4.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
-    <!-- Events Section -->
-    <section id="events" class="events section">
-
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 1
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-1.jpg)">
-              <h3>Custom Parties</h3>
-              <div class="price align-self-start">$99</div>
-              <p class="description">
-                Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis facere. Enim facilis veritatis id est rem repudiandae nulla expedita quas.
-              </p>
-            </div><!-- End Event item -->
-
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-2.jpg)">
-              <h3>Private Parties</h3>
-              <div class="price align-self-start">$289</div>
-              <p class="description">
-                In delectus sint qui et enim. Et ab repudiandae inventore quaerat doloribus. Facere nemo vero est ut dolores ea assumenda et. Delectus saepe accusamus aspernatur.
-              </p>
-            </div><!-- End Event item -->
-
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-3.jpg)">
-              <h3>Birthday Parties</h3>
-              <div class="price align-self-start">$499</div>
-              <p class="description">
-                Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam. Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis.
-              </p>
-            </div><!-- End Event item -->
-
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-4.jpg)">
-              <h3>Wedding Parties</h3>
-              <div class="price align-self-start">$899</div>
-              <p class="description">
-                Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam. Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis.
-              </p>
-            </div><!-- End Event item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Events Section -->
-
-    <!-- Chefs Section -->
-    <section id="chefs" class="chefs section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>chefs</h2>
-        <p><span>Our</span> <span class="description-title">Proffesional Chefs<br></span></p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Master Chef</span>
-                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
-              </div>
-            </div>
-          </div><!-- End Chef Team Member -->
-
-          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Patissier</span>
-                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
-              </div>
-            </div>
-          </div><!-- End Chef Team Member -->
-
-          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>Cook</span>
-                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
-              </div>
-            </div>
-          </div><!-- End Chef Team Member -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Chefs Section -->
-
-    <!-- Book A Table Section -->
-    <section id="book-a-table" class="book-a-table section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Book A Table</h2>
-        <p><span>Book Your</span> <span class="description-title">Stay With Us<br></span></p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row g-0" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 reservation-img" style="background-image: url(assets/img/reservation.jpg);"></div>
-
-          <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
-            <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form">
-              <div class="row gy-4">
-                <div class="col-lg-4 col-md-6">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" required="">
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <input type="date" name="date" class="form-control" id="date" placeholder="Date" required="">
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <input type="time" class="form-control" name="time" id="time" placeholder="Time" required="">
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <input type="number" class="form-control" name="people" id="people" placeholder="# of people" required="">
-                </div>
-              </div>
-
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
-              </div>
-
-              <div class="text-center mt-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
-                <button type="submit">Book a Table</button>
-              </div>
-            </form>
-          </div><!-- End Reservation Form -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Book A Table Section -->
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Gallery</h2>
-        <p><span>Check</span> <span class="description-title">Our Gallery</span></p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "centeredSlides": true,
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 0
-                },
-                "768": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 20
-                },
-                "1200": {
-                  "slidesPerView": 5,
-                  "spaceBetween": 20
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-1.jpg"><img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-2.jpg"><img src="assets/img/gallery/gallery-2.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-3.jpg"><img src="assets/img/gallery/gallery-3.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-4.jpg"><img src="assets/img/gallery/gallery-4.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-5.jpg"><img src="assets/img/gallery/gallery-5.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-6.jpg"><img src="assets/img/gallery/gallery-6.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-7.jpg"><img src="assets/img/gallery/gallery-7.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-8.jpg"><img src="assets/img/gallery/gallery-8.jpg" class="img-fluid" alt=""></a></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Gallery Section -->
+    <div class="container text-center mt-4 mb-5">
+      <h3>Ready to Order?</h3>
+      <p class="mb-3">Place your order quickly and easily through WhatsApp</p>
+      <a href="https://wa.me/919999080556?text=Hello%20New%20Bikaner,%20I%20would%20like%20to%20place%20an%20order." class="btn-getstarted" style="background-color: #25D366; border-color: #25D366; font-size: 18px; padding: 12px 30px;">Order Now on WhatsApp <i class="bi bi-whatsapp"></i></a>
+    </div>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -1021,7 +2170,7 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="mb-5">
-          <iframe style="width: 100%; height: 400px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen=""></iframe>
+          <iframe style="width: 100%; height: 400px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.049693573093!2d77.37289631508219!3d28.62845898241958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce55dc0b47a99%3A0x409e4a0c0cd2d80!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
         </div><!-- End Google Maps -->
 
         <div class="row gy-4">
@@ -1031,7 +2180,7 @@
               <i class="icon bi bi-geo-alt flex-shrink-0"></i>
               <div>
                 <h3>Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>[Replace with street & PIN]</p>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -1041,7 +2190,7 @@
               <i class="icon bi bi-telephone flex-shrink-0"></i>
               <div>
                 <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
+                <p>+91 99990 80556</p>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -1051,7 +2200,7 @@
               <i class="icon bi bi-envelope flex-shrink-0"></i>
               <div>
                 <h3>Email Us</h3>
-                <p>info@example.com</p>
+                <p>orders@newbikaner.example.com</p>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -1061,11 +2210,17 @@
               <i class="icon bi bi-clock flex-shrink-0"></i>
               <div>
                 <h3>Opening Hours<br></h3>
-                <p><strong>Mon-Sat:</strong> 11AM - 23PM; <strong>Sunday:</strong> Closed</p>
+                <p><strong>Mon-Sun:</strong> 8AM - 11PM</p>
               </div>
             </div>
           </div><!-- End Info Item -->
 
+        </div>
+
+        <div class="text-center mt-5">
+          <h3>Order via WhatsApp</h3>
+          <p class="mb-3">Quick and easy ordering through WhatsApp</p>
+          <a href="https://wa.me/919999080556?text=Hello%20New%20Bikaner,%20I%20would%20like%20to%20place%20an%20order." class="btn-getstarted">Order Now on WhatsApp</a>
         </div>
 
         <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
@@ -1112,8 +2267,7 @@
           <i class="bi bi-geo-alt icon"></i>
           <div class="address">
             <h4>Address</h4>
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
+            <p>[Replace with street & PIN]</p>
             <p></p>
           </div>
 
@@ -1124,8 +2278,8 @@
           <div>
             <h4>Contact</h4>
             <p>
-              <strong>Phone:</strong> <span>+1 5589 55488 55</span><br>
-              <strong>Email:</strong> <span>info@example.com</span><br>
+              <strong>Phone:</strong> <span>+91 99990 80556</span><br>
+              <strong>Email:</strong> <span>orders@newbikaner.example.com</span><br>
             </p>
           </div>
         </div>
@@ -1135,8 +2289,7 @@
           <div>
             <h4>Opening Hours</h4>
             <p>
-              <strong>Mon-Sat:</strong> <span>11AM - 23PM</span><br>
-              <strong>Sunday</strong>: <span>Closed</span>
+              <strong>Mon-Sun:</strong> <span>8AM - 11PM</span><br>
             </p>
           </div>
         </div>
@@ -1155,7 +2308,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Yummy</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">New Bikaner</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
@@ -1169,6 +2322,116 @@
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/919999080556?text=Hello%20New%20Bikaner,%20I%20would%20like%20to%20place%20an%20order." class="whatsapp-float d-flex align-items-center justify-content-center" style="position: fixed; bottom: 80px; right: 20px; width: 60px; height: 60px; background-color: #25D366; color: white; border-radius: 50%; font-size: 30px; z-index: 9999; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Shopping Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Your Order</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="cart-items-container">
+            <!-- Cart items will be dynamically added here -->
+            <p id="empty-cart-message" class="text-center">Your cart is empty</p>
+            <div id="cart-items-list"></div>
+          </div>
+          <div class="mt-4 p-3 bg-light rounded">
+            <div class="d-flex justify-content-between mb-2">
+              <span>Subtotal:</span>
+              <span id="cart-subtotal">₹0</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <span>Delivery:</span>
+              <span id="cart-delivery">₹0</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <span>Tax:</span>
+              <span id="cart-tax">₹0</span>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between fw-bold">
+              <span>Total:</span>
+              <span id="cart-total">₹0</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
+          <button type="button" class="btn btn-success" id="checkout-btn">Proceed to Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Form Modal -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="checkoutModalLabel">Checkout</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="checkout-form">
+            <div class="mb-3">
+              <label for="customer-name" class="form-label">Full Name *</label>
+              <input type="text" class="form-control" id="customer-name" required>
+            </div>
+            <div class="mb-3">
+              <label for="customer-phone" class="form-label">Phone Number *</label>
+              <input type="tel" class="form-control" id="customer-phone" required>
+            </div>
+            <div class="mb-3">
+              <label for="customer-address" class="form-label">Delivery Address *</label>
+              <textarea class="form-control" id="customer-address" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="customer-pincode" class="form-label">Pincode *</label>
+              <input type="text" class="form-control" id="customer-pincode" required>
+            </div>
+            <div class="mb-3">
+              <label for="customer-notes" class="form-label">Special Instructions (Optional)</label>
+              <textarea class="form-control" id="customer-notes" rows="2"></textarea>
+            </div>
+          </form>
+          
+          <div class="mt-4 p-3 bg-light rounded">
+            <h6>Order Summary</h6>
+            <div id="checkout-order-summary"></div>
+            <hr>
+            <div class="d-flex justify-content-between mb-1">
+              <span>Subtotal:</span>
+              <span id="checkout-subtotal">₹0</span>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span>Delivery:</span>
+              <span id="checkout-delivery">₹0</span>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span>Tax:</span>
+              <span id="checkout-tax">₹0</span>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between fw-bold">
+              <span>Total:</span>
+              <span id="checkout-total">₹0</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-success" id="final-checkout-btn">Place Order via WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Preloader -->
   <div id="preloader"></div>

@@ -13,16 +13,16 @@
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Amatic SC",  sans-serif;
-  --nav-font: "Inter",  sans-serif;
+  --heading-font: "Playfair Display", serif;
+  --nav-font: "Roboto", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #37373f; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ce1212; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --heading-color: #8B4513; /* Color for headings, subheadings and title throughout the website - SaddleBrown */
+  --accent-color: #D2691E; /* Accent color that represents your brand on the website - Chocolate */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -55,6 +55,60 @@
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# Custom Styles for E-commerce Functionality
+--------------------------------------------------------------*/
+.menu-controls {
+  padding: 12px;
+  background-color: rgba(210, 105, 30, 0.05);
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.qty-input {
+  max-width: 50px;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.qty-btn {
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.variant-select {
+  font-size: 14px;
+  padding: 5px;
+  margin-bottom: 10px !important;
+}
+
+.add-to-cart-btn {
+  font-size: 14px;
+  padding: 8px 12px;
+  margin-top: 5px !important;
+}
+
+.menu-item .price {
+  font-weight: 600;
+  color: var(--accent-color);
+  font-size: 16px;
+}
+
+.cart-item-quantity {
+  max-width: 70px;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.qty-value {
+  min-width: 30px;
+  text-align: center;
+  font-weight: 500;
 }
 
 /*--------------------------------------------------------------
@@ -657,6 +711,53 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Custom Styles for New Bikaner
+--------------------------------------------------------------*/
+.new-bikaner-hero {
+  background: linear-gradient(rgba(210, 105, 30, 0.1), rgba(210, 105, 30, 0.1)), url('../img/hero-img.png') center center;
+  background-size: cover;
+}
+
+.new-bikaner-tagline {
+  font-family: var(--heading-font);
+  font-style: italic;
+  color: var(--accent-color);
+  margin: 15px 0;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.menu .tab-content .menu-item .price {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.why-us .why-box {
+  background: linear-gradient(135deg, var(--accent-color) 0%, #a0522d 100%);
+}
+
+.why-us .icon-box i {
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+}
+
+.why-us .icon-box:hover i {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
 .scroll-top {
@@ -688,6 +789,17 @@ h6 {
   visibility: visible;
   opacity: 1;
   bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+# WhatsApp Floating Button
+--------------------------------------------------------------*/
+.whatsapp-float {
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
 }
 
 /*--------------------------------------------------------------
@@ -738,6 +850,19 @@ h6 {
   display: inline-block;
   padding-right: 10px;
   color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+/*--------------------------------------------------------------
+# WhatsApp Banner
+--------------------------------------------------------------*/
+.whatsapp-banner {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .whatsapp-banner {
+    display: block;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -843,22 +968,26 @@ section,
   margin-left: 25px;
   color: var(--default-color);
   font-weight: 500;
+  background-color: #25D366; /* WhatsApp green */
+  padding: 10px 20px;
+  border-radius: 50px;
 }
 
 .hero .btn-watch-video i {
-  color: var(--accent-color);
-  font-size: 32px;
+  color: var(--contrast-color);
+  font-size: 20px;
   transition: 0.3s;
   line-height: 0;
   margin-right: 8px;
 }
 
 .hero .btn-watch-video:hover {
-  color: var(--accent-color);
+  color: var(--contrast-color);
+  background-color: #128C7E; /* Darker WhatsApp green */
 }
 
 .hero .btn-watch-video:hover i {
-  color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  color: var(--contrast-color);
 }
 
 .hero .animated {
@@ -892,6 +1021,10 @@ section,
     transform: translateY(-10px);
   }
 }
+
+/*--------------------------------------------------------------
+# Custom Styles for New Bikaner
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # About Section
@@ -1088,25 +1221,50 @@ section,
 --------------------------------------------------------------*/
 .menu .nav-tabs {
   border: 0;
+  gap: 10px;
+}
+
+.menu-tabs-wrapper {
+  background-color: color-mix(in srgb, var(--background-color), var(--contrast-color) 98%);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
 }
 
 .menu .nav-link {
   background-color: var(--background-color);
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0 15px;
-  padding: 10px 5px;
-  transition: 0.3s;
-  border-radius: 0;
+  padding: 15px 10px;
+  transition: all 0.3s ease;
+  border-radius: 8px;
   cursor: pointer;
   height: 100%;
-  border: 0;
-  border-bottom: 2px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu .nav-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border-color: var(--accent-color);
 }
 
 @media (max-width: 575px) {
   .menu .nav-link {
-    margin: 0 10px;
-    padding: 10px 0;
+    margin: 5px;
+    padding: 12px 5px;
+    min-width: 120px;
+  }
+  
+  .menu .nav-tabs {
+    justify-content: center;
+  }
+  
+  .menu-tabs-wrapper {
+    padding: 15px 10px;
   }
 }
 
@@ -1116,16 +1274,29 @@ section,
 }
 
 .menu .nav-link h4 {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 600;
   margin: 0;
   font-family: var(--default-font);
+  color: var(--heading-color);
+}
+
+.menu .nav-link:hover h4 {
+  color: var(--accent-color);
 }
 
 @media (max-width: 575px) {
   .menu .nav-link h4 {
-    font-size: 16px;
+    font-size: 18px;
   }
+}
+
+.menu .nav-link.active {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(210, 105, 30, 0.3);
 }
 
 .menu .nav-link:hover {
@@ -1141,6 +1312,9 @@ section,
 
 .menu .tab-content .tab-header {
   padding: 30px 0;
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .menu .tab-content .tab-header p {
@@ -1148,40 +1322,74 @@ section,
   text-transform: uppercase;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 0;
+  letter-spacing: 1px;
 }
 
 .menu .tab-content .tab-header h3 {
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 56px;
+  font-weight: 800;
   color: var(--accent-color);
+  margin: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.menu .tab-content .tab-header h3:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 3px;
 }
 
 .menu .tab-content .menu-item {
   text-align-last: center;
+  transition: all 0.3s ease;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: color-mix(in srgb, var(--background-color), var(--contrast-color) 95%);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.menu .tab-content .menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .menu .tab-content .menu-item .menu-img {
-  padding: 0 60px;
+  padding: 0 40px;
   margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .menu .tab-content .menu-item h4 {
-  font-size: 24px;
-  font-weight: 400;
-  margin-bottom: 5px;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
   font-family: var(--default-font);
+  color: var(--heading-color);
 }
 
 .menu .tab-content .menu-item .ingredients {
   font-family: var(--nav-font);
   color: color-mix(in srgb, var(--default-color), transparent 50%);
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  min-height: 60px;
 }
 
 .menu .tab-content .menu-item .price {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--accent-color);
+  margin-bottom: 15px;
 }
 
 /*--------------------------------------------------------------
@@ -1653,4 +1861,94 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/*--------------------------------------------------------------
+# Shopping Cart Styles
+--------------------------------------------------------------*/
+#cart-button {
+  position: relative;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 15px;
+}
+
+#cart-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#cart-button .badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 0.7rem;
+  border-radius: 50%;
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.cart-item {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.cart-item:hover {
+  background-color: #f8f9fa;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.add-to-cart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(210, 105, 30, 0.4);
+  background-color: color-mix(in srgb, var(--accent-color), black 10%);
+  border-color: color-mix(in srgb, var(--accent-color), black 10%);
+}
+
+.menu-item .form-select {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.cart-item .remove-item {
+  border: none;
+  background: transparent;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.cart-item .remove-item:hover {
+  background-color: #f8d7da;
+}
+
+.modal-content {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-radius: 15px 15px 0 0;
+}
+
+.modal-footer {
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-radius: 0 0 15px 15px;
 }
